@@ -1,0 +1,37 @@
+{
+  "deploy.reloaded": {
+      "packages": [
+          {
+              "name": " Webpage",
+              "description": "The wp folder",
+
+              "files": [
+                  "**/*.php",
+                  "**/*.css",
+                  "**/*.js",
+                  "**/*.log"
+              ],
+              "exclude": [
+                  // "**/!(wp-config).php",
+                  // "**/!(debug).log",
+              ],
+
+              "deployOnSave": [ "travesurasWebpage" ],
+              //"syncWhenOpen": "siscovidWebpage",
+          }
+      ],
+
+      "targets": [
+          {
+              "type": "ftp",
+              "name": "travesurasWebpage",
+              "description": "public_html",
+              "host": "ftp.travesuras.com.co", 
+              "port": 21,
+              "user": "jabali@travesuras.com.co", 
+              "password": "Morimosenjesus84/",
+              "dir": "/public_html/"
+          }
+      ]
+  }
+}
